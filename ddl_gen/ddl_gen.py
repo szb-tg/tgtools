@@ -5,6 +5,9 @@ import TgMeta as tgm
 def main():
     # conn = tg.TigerGraphConnection(host="http://127.0.0.1", restppPort="30900", gsPort="30240")
     conn = tg.TigerGraphConnection(host="http://127.0.0.1", restppPort="26900", gsPort="26240", gsqlVersion="2.6.0")
+    # conn = tg.TigerGraphConnection(host="https://szba-buws.i.tgcloud.io", graphname="FraudGraph", useCert=True)
+    # conn.debug=True
+    # conn.getToken("accsjg1cfaqv9r2rodgn1eq976uo3hh1")
 
     meta = tgm.TgMeta(conn)
 
