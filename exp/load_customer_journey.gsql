@@ -1,0 +1,8 @@
+USE GRAPH cja
+DROP JOB load_customer_journey
+BEGIN
+CREATE LOADING JOB load_customer_journey FOR GRAPH cja {
+    DEFINE FILENAME datafile = "customer_journey.csv";
+    LOAD datafile TO VERTEX customer_journey VALUES ($0, $1, $2, $3) USING SEPARATOR=",";
+}
+END
